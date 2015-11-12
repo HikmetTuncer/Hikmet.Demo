@@ -14,7 +14,7 @@ namespace Hikmet.Demo.Data.Migrations
             AutomaticMigrationsEnabled = true;
             AutomaticMigrationDataLossAllowed = true; 
 
-            ContextKey = "Hikmet.Demo.Data.DemoDb";
+            //ContextKey = "Hikmet.Demo.Data.DemoDb";
         }
 
         protected override void Seed(Hikmet.Demo.Data.DemoDb context)
