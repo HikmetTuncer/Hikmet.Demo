@@ -47,10 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DemoDb.cs" />
-    <Compile Include="Migrations\201511121719026_InitialCreate.cs" />
-    <Compile Include="Migrations\201511121719026_InitialCreate.Designer.cs">
-      <DependentUpon>201511121719026_InitialCreate.cs</DependentUpon>
-    </Compile>
+    <Compile Include="DevelopmentModeInitializer.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -63,11 +60,6 @@
       <Project>{391cd0fd-b7fb-4f4a-9a5a-6e6b98ae744f}</Project>
       <Name>Hikmet.Demo.Entities</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201511121719026_InitialCreate.resx">
-      <DependentUpon>201511121719026_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

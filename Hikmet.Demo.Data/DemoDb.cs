@@ -15,8 +15,10 @@ namespace Hikmet.Demo.Data
             : base("DefaultConnection")
         {
             // required to force Azure to run the migration scripts when deploying from Git
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<DemoDb, Data.Migrations.Configuration>());
-            
+            //Database.SetInitializer(new MigrateDatabaseToLatestVersion<DemoDb, Data.Migrations.Configuration>());
+
+            Database.SetInitializer(new DevelopmentModeInitializer<DemoDb>());
+            Database.Initialize(false); // make the DB update directly instead of waiting for context usage            
         }
 
         public DbSet<Kebab> Kebabs { get; set; }
