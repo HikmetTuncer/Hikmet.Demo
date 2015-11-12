@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hikmet.Demo.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,8 +9,12 @@ namespace Hikmet.Demo.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private DemoDb _demodb = new DemoDb(); 
+
         public ActionResult Index()
         {
+            var pizzas = _demodb.Pizzas.ToList();
+
             return View();
         }
 

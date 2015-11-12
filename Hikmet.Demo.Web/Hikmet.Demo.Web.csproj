@@ -161,6 +161,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PizzasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -229,6 +230,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Pizzas\Create.cshtml" />
+    <Content Include="Views\Pizzas\Delete.cshtml" />
+    <Content Include="Views\Pizzas\Details.cshtml" />
+    <Content Include="Views\Pizzas\Edit.cshtml" />
+    <Content Include="Views\Pizzas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -239,6 +245,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hikmet.Demo.Data\Hikmet.Demo.Data.csproj">
+      <Project>{3f6a27ab-6e8c-47a4-ac96-e5346ca01677}</Project>
+      <Name>Hikmet.Demo.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hikmet.Demo.Entities\Hikmet.Demo.Entities.csproj">
+      <Project>{391cd0fd-b7fb-4f4a-9a5a-6e6b98ae744f}</Project>
+      <Name>Hikmet.Demo.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
